@@ -9,3 +9,11 @@ age=5
 Age=10
 AGE=111
 print(age,Age,AGE)
+
+# Valid But not used in prjects
+_ = 10
+__ = 20
+print(_ + __)
+
+# Invalid 
+# 1Age = "10" 

@@ -1,4 +1,0 @@
-Hello, World!
-This is a sample text file used for file handling practice.
-Python makes it easy to read and write files.
-Here are some interesting facts:

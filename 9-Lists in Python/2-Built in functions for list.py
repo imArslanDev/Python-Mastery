@@ -12,14 +12,14 @@ print(f"Maximum marks = {maximinmMarks}")
 minimumMarks = min(marks)
 print(f"Minimum marks = {minimumMarks}")
 
-# Sum Total 
+# Sum Total
 total = sum(marks)
 print(f"Total marks = {total}")
 
 # To sort using sorted(), it will always return you a new list
-new_list = sorted(marks, reverse=False) 
+new_list = sorted(marks, reverse=False)
 print(f"New List = {new_list}")
 print(f"Marks = {marks}")
 
 # Check to verify
-print(marks == new_list) # False That means both are diffrent in memory
+print(marks == new_list)  # False That means both are diffrent in memory

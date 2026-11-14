@@ -1,20 +1,25 @@
 # lambda functions are anonymous functions jin ke name nhi hote 
-# def square(num):
-#     return num * num
 
+def find_square(num):
+    return num ** 2
 
-# square = lambda num: num * num
+print(find_square(4))
 
+addition = lambda num1, num2: num1 + num2
+subtraction = lambda num1, num2:  num1 - num2 if (num1 >= num2) else "Num 1 must be a bigger number then Num2 for Subtraction"
 
-# print(square(10))
-# print(square(5))
+print(addition(10, 20))
+print(addition(5000, 120000))
+print(subtraction(50, 10))
+print(subtraction(20, 40))
+
 
 
 # Return True if age>=18 else false
-# def is_adult(age):
-#     if age >= 18:
-#         return True
-#     return False
+def is_adult(age):
+    if age >= 18:
+        return True
+    return False
 
 
 is_adult = lambda age: True if age >= 18 else False

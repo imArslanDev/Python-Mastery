@@ -171,35 +171,7 @@ integer from the list.
 
 
 # Reason is this here we supposed to get reuslt where 1 should be not in the list but it is
-messy_list = [
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    5,
-    4,
-    5,
-    5,
-    6,
-    5,
-    4,
-    3,
-    5,
-    6,
-    7,
-    6,
-    7,
-    1,
-    1,
-    1,
-]
+messy_list = [1, 1, 1, 1, 5, 4, 5, 5, 6, 5, 4, 3, 5, 6, 7, 6, 7, 1, 1]
 # print("New List")
 # print(remove_occurance(1, messy_list))
 
@@ -250,3 +222,136 @@ print(marks_greater_than_75)
 
 print(marks, id(marks))
 print(marks_greater_than_75, id(marks_greater_than_75))
+
+print()
+
+"""
+Question 12: Given a 3x3 matrix as input, print its lower triangle.
+Replace all elements in the upper triangle (above the main diagonal) with an asterisk (*).
+
+1  2  3
+4  5  6
+7  8  9
+
+1  *  *
+4  5  *
+7  8  9
+"""
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+
+
+rows = len(matrix)
+columns = len(matrix[0])
+
+for outer in range(0, rows):
+    for inner in range(0, columns):
+        if outer >= inner:
+            print(matrix[outer][inner], end=" ")
+        else:
+            print("*", end=" ")
+    print()
+
+
+print()
+"""
+Question 13: Given a 3x3 matrix, print its upper triangle.
+Replace all elements in the lower triangle (below the main diagonal) with an asterisk (*).
+
+1  2  3
+4  5  6
+7  8  9
+
+Expected Output:
+1  2  3
+*  5  6
+*  *  9
+"""
+
+for outer in range(0, rows):
+    for inner in range(0, columns):
+        if outer <= inner:
+            print(matrix[outer][inner], end=" ")
+        else:
+            print("*", end=" ")
+    print()
+
+print()
+
+"""
+Question 14: Given a 3x3 matrix, print only the main diagonal elements and replace
+everything else with an asterisk (*).
+# 1 2 3
+# 4 5 6
+# 7 8 9
+
+# Expected Output:
+# 1 * *
+# * 5 *
+# * * 9
+
+"""
+
+for outer in range(0, rows):
+    for inner in range(0, columns):
+        if outer == inner:
+            print(matrix[outer][inner], end=" ")
+        else:
+            print("*", end=" ")
+    print()
+
+print()
+
+"""
+Question 15: Given a 3x3 matrix, print only the anti-diagonal (top-right to bottom-left)
+elements and replace everything else with an asterisk (*).
+
+1  2 3
+4  5 6
+7  8 9
+
+Expected Output:
+*  * 3
+*  5 *
+7  * *
+"""
+
+
+for outer in range(0, rows):
+    for inner in range(0, columns):
+        if outer + inner == columns - 1:
+            print(matrix[outer][inner], end=" ")
+        else:
+            print("*", end=" ")
+    print()
+
+print()
+
+"""
+Question 16: Given a 6x6 matrix, print only the border elements and replace the
+inner elements with an asterisk (*).
+"""
+
+matrix = [
+    [1, 2, 3, 4, 5, 6],
+    [7, 8, 9, 1, 2, 3],
+    [4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6],
+    [7, 8, 9, 1, 2, 3],
+    [4, 5, 6, 7, 8, 9],
+]
+
+rows = len(matrix)
+columns = len(matrix)
+
+for r in range(rows):
+    for c in range(columns):
+        if r == 0 or r == rows - 1 or c == 0 or c == columns - 1:
+            print(matrix[r][c], end=" ")
+        else:
+            print("*", end=" ")
+    print()

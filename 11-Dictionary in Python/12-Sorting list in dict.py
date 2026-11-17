@@ -1,10 +1,14 @@
 marks = {
-    "akshy": [43, 12, 98, 10, 22],
-    "priya": [76, 55, 34, 89, 61],
-    "rahul": [20, 45, 67, 30],
-    "sneha": [91, 73],
-    "karan": [38, 82, 47, 95, 29],
+    "Ali": [43, 12, 98, 10, 22],
+    "Zubair": [76, 55, 34, 89, 61],
+    "Basit": [20, 45, 67, 30],
+    "Mustakeem": [91, 73],
+    "Faisal": [38, 82, 47, 95, 29],
 }
 
-ans = dict(sorted(marks.items(), key=lambda x: sum(x[1]), reverse=True))
-print(ans)
+# result = dict(sorted(marks.items(), key=lambda item: item[1][-1]))
+result = dict(sorted(marks.items(), key=lambda item: sum(item[1])))
+print(result)
+
+for name, mark in marks.items():
+    print(f"{name} Marks: {sum(mark)}")

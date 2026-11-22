@@ -13,5 +13,5 @@ nahi kar rahe hotay, balkay uske andar wali cheezon ko modify kar rahe hotay hai
 
 Yahan bahar wale `lst` aur function parameter `lst` dono ek hi list object
 `[1, 2, 5]` ko point kar rahe hain. `.append(100)` ussi list ke andar `100`
-add kar deta hai, isliye outside function bhi `lst` `[1, 2, 5, 100]` ho jata hai.
+add kar deta hai, isliye outside function bhi `lst` `[1, 2, 5, 100]` ho jata hai. 
 """
